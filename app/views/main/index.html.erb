@@ -1,0 +1,19 @@
+<h1>HR-Interview-Management</h1>
+
+
+<% if @register %>
+  Welcome to the HR Interview Management 
+  <%= @register.name %>
+
+    <div class = "btn btn-info btn-lg">
+      <%= link_to "Log Out", 'logout', method: :delete %>
+    </div>
+<% else %>
+  <div class = "btn btn-info btn-lg">
+    <%= link_to "Sign In", sign_in_path %>  
+  </div>
+  
+  <div class = "btn btn-info btn-lg">
+    <%= link_to 'Sign Up' ,'/sign_up'%>
+  </div>
+<% end %>
